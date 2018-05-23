@@ -1,7 +1,7 @@
 import re
 
 string = str(input("Input string: ")).lower()
-string = sub(r"[^a-z]", "", string)
+string = re.sub("[^a-z]", "", string)
 inverse_str = string[::-1]
 print("Inverse string: " + inverse_str)
 if string == inverse_str:
