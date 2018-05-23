@@ -1,12 +1,14 @@
 # For the input of your function will be given one sentence.
-# You have to return its fixed copy in a way so it’s always starts with a capital letter
-# and ends with a dot.
+# You have to return its fixed copy in a way so
+# it’s always starts with a capital letter and ends with a dot.
 # Pay attention to the fact that not all of the fixes is necessary.
-# If a sentence already ends with a dot then adding another one will be a mistake.
-# Precondition: No leading and trailing spaces, text contains only spaces, a-z A-Z , and .
+# If a sentence already ends with a dot - adding another one will be a mistake.
+# No leading and trailing spaces, text contains only spaces, a-z A-Z , and .
 
 
-# This is script for thia task but without functions, you may uncomment it and run
+# This is script for this task but without using functions
+# you may uncomment it and run
+
 # text = input("Input: ")
 # text = text[0].upper() + text[1:].lower()
 # if text[len(text)-1] != '.':
