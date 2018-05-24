@@ -18,7 +18,7 @@
 
 def correct_sentence(text: str) -> str:
     text = text[0].upper() + text[1:].lower()
-    if text[len(text) - 1] != '.':
+    if text[-1] != '.':
         text = text + '.'
     return text
 
