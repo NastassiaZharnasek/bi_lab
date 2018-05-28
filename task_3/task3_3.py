@@ -4,7 +4,7 @@
 
 
 def generate_numbers(number=20):
-    return {i: i*i for i in range(1, number + 1)}
+    return {i: i * i for i in range(1, number + 1)}
 
 
 print(generate_numbers(10))
@@ -22,4 +22,3 @@ def count_characters(count_me_string):
 
 
 print(count_characters('asdfada'))
-

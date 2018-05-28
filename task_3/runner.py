@@ -15,7 +15,3 @@ def runner(args):
 
 
 runner(['generate_numbers', 'count_characters', 'happy_numbers'])
-
-
-
-

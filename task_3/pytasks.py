@@ -4,7 +4,7 @@ import re
 def generate_numbers(number=20):
     dictionary1 = {}
     for i in range(1, number + 1):
-        dictionary1[i] = i*i
+        dictionary1[i] = i * i
     print(dictionary1)
     return [dictionary1]
 
@@ -54,5 +54,3 @@ def is_palindrome():
         print("The string is a palindrome")
     else:
         print("The string is not a palindrome")
-
-
