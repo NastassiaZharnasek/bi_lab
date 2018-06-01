@@ -19,13 +19,15 @@ class BankCreditRequest(object):
         if self.age_check():
             if self.credit_amount / (self.credit_term * 12) * 1.09 \
                     < self.salary * 0.7:
-                return "Credit for %s %s approved." % (self.name, self.surname)
+                response = "Credit for %s %s approved." % (self.name,
+                                                           self.surname)
             else:
-                return "Credit for %s %s rejected due to insolvency." % \
+                response = "Credit for %s %s rejected due to insolvency." % \
                        (self.name, self.surname)
         else:
-            return "Credit for %s %s rejected due to the fact that the client"\
-                   " is not of legal age." % (self.name, self.surname)
+            response = "Credit for %s %s rejected due to the fact that the " \
+                      "client is not of legal age." % (self.name, self.surname)
+        return response
 
     def print_information(self):
         print("Name: ", self.name)
