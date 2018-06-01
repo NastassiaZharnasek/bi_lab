@@ -23,7 +23,7 @@ class BankCreditRequest(object):
                                                            self.surname)
             else:
                 response = "Credit for %s %s rejected due to insolvency." % \
-                       (self.name, self.surname)
+                           (self.name, self.surname)
         else:
             response = "Credit for %s %s rejected due to the fact that the " \
                       "client is not of legal age." % (self.name, self.surname)
