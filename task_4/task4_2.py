@@ -26,7 +26,8 @@ class BankCreditRequest(object):
                            (self.name, self.surname)
         else:
             response = "Credit for %s %s rejected due to the fact that the " \
-                      "client is not of legal age." % (self.name, self.surname)
+                       "client is not of legal age." % \
+                       (self.name, self.surname)
         return response
 
     def print_information(self):
