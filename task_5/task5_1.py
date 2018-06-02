@@ -1,6 +1,6 @@
-import os
-from ftplib import FTP
+import FTP
 import gzip
+import os
 
 zip_name = 'ratings.list.gz'
 result_file_name = os.path.join(r'd:\task_5', zip_name)

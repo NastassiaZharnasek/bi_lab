@@ -1,6 +1,5 @@
 import argparse
 from ftplib import FTP
-
 import os.path
 
 imdb_data_url = 'www.kaggle.com/PromptCloudHQ/imdb-data_xml/' \
