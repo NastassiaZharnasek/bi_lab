@@ -1,7 +1,6 @@
 import argparse
 import csv
 import json
-import os
 import urllib.request
 import xml.etree.cElementTree as et
 import xmltodict
@@ -34,7 +33,14 @@ def convert_to_json(file_name, data_to_convert):
 
 def convert_to_yml(file_name, data_to_convert):
     file = open(file_name + '.yml', 'w')
-    yaml.dump(data_to_convert, file, default_flow_style=False)
+    yaml.dump(xmltodict.parse(data_to_convert), file, default_flow_style=False)
+
+
+def convert_to_xml(file_name, data_to_convert):
+    xml_data = str(data_to_convert.read(), 'utf-8')
+    file = open(file_name + '.xml', 'w')
+    file.write(xml_data)
+    return xml_data
 
 
 argument_parser = argparse.ArgumentParser()
@@ -44,12 +50,10 @@ argument_parser.add_argument('--url',
 
 args = argument_parser.parse_args()
 url = args.url
+result_file_name = 'result'
 
 content = urllib.request.urlopen(url)
-data_xml = str(content.read(), 'utf-8')
-
-file_name_with_directory = os.path.join(r'd:\task_5', 'result')
-
-convert_to_yml(file_name_with_directory, data_xml)
-convert_to_json(file_name_with_directory, data_xml)
-convert_to_csv(file_name_with_directory, data_xml)
+data_xml = convert_to_xml(result_file_name, content)
+convert_to_yml(result_file_name, data_xml)
+convert_to_json(result_file_name, data_xml)
+convert_to_csv(result_file_name, data_xml)
