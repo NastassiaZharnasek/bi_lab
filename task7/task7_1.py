@@ -21,4 +21,3 @@ test_string_with_underscores = test_string.replace(' ', '_')
 test_string_with_whitespaces = test_string.replace('_', ' ')
 print(test_string_with_underscores)
 print(test_string_with_whitespaces)
-
